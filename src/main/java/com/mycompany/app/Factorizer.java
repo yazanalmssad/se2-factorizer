@@ -8,29 +8,11 @@ import java.util.List;
  */
 public interface Factorizer {
 
-    /**
-     * Method accepts numbers as {@code args} and outputs lines with the
-     * number {@code n}, its factors and an indicator whether {@code n} is a
-     * prime number.
-     *
-     * @param args numbers to factorize
-     */
     public void run(String[] args);
 
-    /**
-     * Method accepts a number {@code n} and returns its factors.
-     *
-     * @param n number to factorize
-     * @return factors
-     */
-    public List<Integer> factorize(Integer n);
+    public List<Long> factorize(Long n);
 
-    /**
-     * Return reference to singleton instance of (hidden) implementation class.
-     *
-     * @return singleton instance
-     */
     static Factorizer getInstance() {
         return FactorizerImpl.getInstance();
     }
-} 
+}
