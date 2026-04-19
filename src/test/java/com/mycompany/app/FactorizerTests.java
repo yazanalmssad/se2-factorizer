@@ -1,5 +1,7 @@
 package com.mycompany.app;
 
+import org.hamcrest.Matchers;
+import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
@@ -87,4 +89,11 @@ void test_factorize_more_negative_arguments() {
         () -> factorizer.factorize(-2147483648L)
     );
     assertTrue(ex2.getMessage().contains("illegal negative parameter"));
-}}
+}
+@Test
+void test_factorize_n_is_12_ignore_order() {
+    List<Long> expected = List.of(3L, 2L, 2L);
+    List<Long> actual = factorizer.factorize(12L);
+    assertThat(expected, Matchers.containsInAnyOrder(actual.toArray()));
+}
+}
