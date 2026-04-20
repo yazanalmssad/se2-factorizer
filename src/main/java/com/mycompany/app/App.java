@@ -8,4 +8,4 @@ public class App {
         System.out.println("Hello Factorizer!");
         Factorizer.getInstance().run(args);
     }
-}
+} 

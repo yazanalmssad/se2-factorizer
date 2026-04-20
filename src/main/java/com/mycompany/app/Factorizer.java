@@ -15,4 +15,4 @@ public interface Factorizer {
     static Factorizer getInstance() {
         return FactorizerImpl.getInstance();
     }
-}
+} 

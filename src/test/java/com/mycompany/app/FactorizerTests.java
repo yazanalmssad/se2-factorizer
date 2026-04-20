@@ -83,7 +83,7 @@ void test_factorize_more_negative_arguments() {
         () -> factorizer.factorize(-10L)
     );
     assertTrue(ex1.getMessage().contains("illegal negative parameter"));
-
+ 
     IllegalArgumentException ex2 = assertThrows(
         IllegalArgumentException.class,
         () -> factorizer.factorize(-2147483648L)
@@ -96,4 +96,4 @@ void test_factorize_n_is_12_ignore_order() {
     List<Long> actual = factorizer.factorize(12L);
     assertThat(expected, Matchers.containsInAnyOrder(actual.toArray()));
 }
-}
+} 
