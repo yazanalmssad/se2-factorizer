@@ -1,9 +1,9 @@
-package com.mycompany.app;
+package de.factorizer;
 
-import org.hamcrest.Matchers;
-import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import org.hamcrest.Matchers;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
